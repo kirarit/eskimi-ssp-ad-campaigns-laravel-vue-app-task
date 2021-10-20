@@ -22,7 +22,12 @@ class AdvertisingCampaignFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->name(),
+            'from_date' => now()->format('Y-m-d'),
+            'to_date' => now()->addYear()->format('Y-m-d'),
+            'daily_budget' => rand(30, 80),
+            'total_budget' => rand(3000, 8000),
+            'image_path' => $this->faker->imageUrl($width = 200, $height = 200)
         ];
     }
 }

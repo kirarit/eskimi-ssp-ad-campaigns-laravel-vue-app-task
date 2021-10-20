@@ -13,6 +13,6 @@ class AdvertisingCampaignSeeder extends Seeder
      */
     public function run()
     {
-        //
+        \App\Models\AdvertisingCampaign::factory(20)->create();
     }
 }
