@@ -235,7 +235,10 @@
                                 <div class="container center">
                                     <h2>Name: {{ editAdContentForm.name }}</h2>
                                     <p>
-                                        Image:
+                                        Image: 
+                                        <div id="preview">
+                                            <img :src=editAdContentForm.img_path />
+                                        </div>
                                     </p>
                                 </div>
                             </form>
@@ -423,13 +426,13 @@ export default {
             this.editAdContentForm.to_date = ad.to_date;
             this.editAdContentForm.daily_budget = ad.daily_budget;
             this.editAdContentForm.total_budget = ad.total_budget;
-            this.editAdContentForm.img_path = ad.img_path;
+            this.editAdContentForm.img_path = ad.image_path;
             this.editAdContentForm.id = ad.id;
             $("#editAdContentModal").modal("show");
         },
         showAdContent(ad) {
             this.editAdContentForm.name = ad.name;
-            this.editAdContentForm.img_path = ad.img_path;
+            this.editAdContentForm.img_path = ad.image_path;
             this.editAdContentForm.created_at = ad.created_at;
             this.editAdContentForm.id = ad.id;
             $("#showAdContentModal").modal("show");
