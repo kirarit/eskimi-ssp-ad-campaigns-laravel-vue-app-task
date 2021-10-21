@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/advertising-campaign', 'AdvertisingCampaignController@index')->name('index');
-Route::post('/advertising-campaign', 'AdvertisingCampaignController@store')->name('store');
-Route::put('/advertising-campaign/{advertisingCampaign}', 'AdvertisingCampaignController@update')->name('update');
-Route::delete('/advertising-campaign/{advertisingCampaign}', 'AdvertisingCampaignController@destroy')->name('delete');
+Route::get('/advertising-campaign', 'AdvertisingCampaignController@index')->name('advertising-campaign.index');
+Route::post('/advertising-campaign', 'AdvertisingCampaignController@store')->name('advertising-campaign.store');
+Route::put('/advertising-campaign/{advertisingCampaign}', 'AdvertisingCampaignController@update')->name('advertising-campaign.update');
+Route::delete('/advertising-campaign/{advertisingCampaign}', 'AdvertisingCampaignController@destroy')->name('advertising-campaign.delete');
 
