@@ -346,7 +346,8 @@
 
                                     <FormulateInput
                                         type="image"
-                                        name="img"
+                                        name="img[]"
+                                        multiple
                                         upload-url="/public/image-uploads"
                                         label="Creative Upload"
                                         upload-behavior="delayed"
